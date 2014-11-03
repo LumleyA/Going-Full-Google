@@ -1,0 +1,180 @@
+/**************************************************************************
+* Navigation
+***************************************************************************/
+.navbar-default,
+.navbar-default .navbar-collapse {
+    background-color: #000;
+    border: none;
+    box-shadow: none;
+    color: #fff;
+}
+.navbar-default .navbar-nav > li > a {
+    color: #ccc;
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.navbar-default .navbar-nav > li > a > span.glyphicon-chevron-right {
+    float: right;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: inherit;
+    background-color: transparent;
+}
+.navbar-default .navbar-nav .active {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+.navbar-default .navbar-nav > .active {
+    border-color: #fff !important;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #fff;
+    background-color: inherit;
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+    color: inherit;
+    background-color: inherit;
+}
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+    background-color: #000;
+    color: #fff
+}
+.dropdown-menu .divider {
+    background-color: #eee;
+}
+/* Logo */
+.navbar-brand {
+    overflow: hidden;
+}
+.navbar-brand img {
+    height: 60px;
+    position: relative;
+    top: -20px;
+    left: -10px;
+}
+/* Mobile Navigation */
+.navbar-default .navbar-toggle {
+    border-color: #fff;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #fff;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background-color: inherit;
+}
+.navbar-default .navbar-toggle span {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+.navbar-default .navbar-toggle span:nth-of-type(2) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: relative;
+    top: 6px;
+}
+.navbar-default .navbar-toggle span:nth-of-type(3) {
+    opacity: 0;
+}
+.navbar-default .navbar-toggle span:nth-of-type(4) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    position: relative;
+    top: -6px;
+}
+.navbar-default .navbar-toggle.collapsed span {
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    transform: rotate(0);
+    opacity: 1;
+    top: 0;
+}
+
+
+
+#main-navigation-0,
+#main-navigation-1,
+#main-navigation-2 {
+    position: absolute;
+    width: 100%;
+    top: 50px;
+    left: 0;
+    background-color: #000;
+}
+#main-navigation-1 {
+    left: 100%;
+}
+#main-navigation-2 {
+    left: 200%;
+}
+#main-navigation-container,
+#sub-navigation-container {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+#main-navigation-container {
+    z-index: 100;
+}
+#main-navigation-container.showSubNavigation {
+    top: 0;
+}
+#main-navigation-container .navbar-brand {
+    position: relative;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    top: 0;
+    width: 197px;
+    z-index: 100;
+}
+
+#sub-navigation-container {
+    display: none;
+}
+#sub-navigation-container.showSubNavigation {
+    opacity: 1;
+}
+#sub-navigation-container .navbar-brand {
+    width: 197px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+/* Tablet */
+@media (min-width: 768px) {
+    #main-navigation-container {
+        position: relative;
+        top: 25px;
+    }
+    #main-navigation-container li {
+        border-bottom: solid 1px #000;
+    }
+    #main-navigation-container.showSubNavigation .navbar-brand {
+        top: 25px;
+    }
+    #sub-navigation-container {
+        display: block;
+        opacity: 0;
+    }
+    .navbar-brand img {
+        height: 70px;
+    }
+}
